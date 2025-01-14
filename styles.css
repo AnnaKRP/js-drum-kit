@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica:ital@0;1&display=swap');
+
+body {
+    text-align: center;
+    background-color: #293241;
+  }
+  
+  h1 {
+    font-size: 5rem;
+    color: #DBEDF3;
+    font-family: "IM Fell DW Pica", serif;
+
+  }
+  
+  .w {
+  
+  }
+  
+  .a {
+  
+  }
+  
+  .s {
+  
+  }
+  
+  .d {
+  
+  }
+  
+  .j {
+  
+  }
+  
+  .k {
+  
+  }
+  
+  .l {
+  
+  }
+  
+  .set {
+    margin: 10% auto;
+  }
+  
+  .game-over {
+    background-color: red;
+    opacity: 0.8;
+  }
+  
+  .pressed {
+    box-shadow: 0 3px 4px 0 #DBEDF3;
+    opacity: 0.5;
+  }
+  
+  .red {
+    color: red;
+  }
+  
+  .drum {
+    outline: none;
+    border: 10px solid #3D5A80;
+    font-size: 5rem;
+    font-family: "IM Fell DW Pica", serif;
+    line-height: 2;
+    font-weight: 900;
+    color: #EE6C4D;
+    border-radius: 15px;
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    margin: 10px;
+    background-color: white;
+  }
+  
