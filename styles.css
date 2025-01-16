@@ -1,77 +1,186 @@
-@import url('https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alkalami&family=Allura&family=Bigshot+One&family=Buda:wght@300&family=Carter+One&family=Federo&family=Fondamento:ital@0;1&family=Fugaz+One&family=Gabriela&family=Gideon+Roman&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lexend:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Pattaya&family=Potta+One&family=Quando&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Trade+Winds&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
 body {
-    text-align: center;
-    background-color: #293241;
-  }
-  
-  h1 {
-    font-size: 5rem;
-    color: #DBEDF3;
-    font-family: "IM Fell DW Pica", serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #293241;
+  text-align: center;
+}
 
+h1 {
+  margin: 25px 0 0 0;
+  font-size: 5rem;
+  font-family: "Ubuntu", serif;
+  color: #D3E298;
+  text-shadow:
+    0 0 4px #293241,
+    0 0 10px #293241,
+    0 0 18px #293241,
+    0 0 38px #ECDD7B,
+    0 0 73px #ECDD7B,
+    0 0 80px #ECDD7B;
+}
+
+.w {
+  background-image: url("assets/drum1.png");
+}
+
+.a {
+  background-image: url("assets/drum2.png");
+}
+
+.s {
+  background-image: url("assets/kickbass.png");
+}
+
+.d {
+  background-image: url("assets/cymbal.png");
+}
+
+.j {
+  background-image: url("assets/drum3.png");
+}
+
+.k {
+  background-image: url("assets/drum2.png");
+}
+
+.l {
+  background-image: url("assets/drum1.png");
+}
+
+.set {
+  margin: 10% auto;
+}
+
+.pressed {
+  animation: shaking 1s;
+}
+
+.drum {
+  outline: none;
+  font-size: 4rem;
+  font-family: "Ubuntu", serif;
+  line-height: 2;
+  font-weight: 900;
+  color: #ECDD7B;
+  border-radius: 15px;
+  border: 1px solid #293241;
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  margin: 10px;
+  padding-top: 3rem;
+  background-color: white;
+  background-size: cover;
+  text-shadow:
+    0 0 4px #293241,
+    0 0 10px #293241,
+    0 0 18px #293241,
+    0 0 38px #ECDD7B,
+    0 0 73px #ECDD7B,
+    0 0 80px #ECDD7B;
+}
+
+#rules {
+  background-color: transparent;
+  color: #ECDD7B;
+  font-family: "Ubuntu", serif;
+  width: 30%;
+  font-size: 2rem;
+  padding: 5px 10px;
+  border-radius: 25px;
+  border: 3px solid #ECDD7B;
+  cursor: pointer;
+}
+
+#rules:hover {
+  box-shadow:
+    0 0 4px #293241,
+    0 0 10px #293241,
+    0 0 18px #ECDD7B,
+    0 0 38px #ECDD7B,
+    0 0 73px #ECDD7B;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #293241e7;
+  z-index: 1000;
+}
+
+.modal-content {
+  position: fixed;
+  background-color: white;
+  font-family: "Ubuntu", serif;
+  top: 50%;
+  left: 50%;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 600px;
+  text-align: left;
+  transform: translate(-50%, -50%);
+}
+
+.modal-content> :nth-child(1) {
+  font-size: 2rem;
+  text-align: center;
+}
+
+@keyframes shaking {
+  0% {
+    transform: rotate(0deg);
   }
-  
-  .w {
-  
+
+  25% {
+    transform: rotate(5deg);
   }
-  
-  .a {
-  
+
+  50% {
+    transform: rotate(0deg);
   }
-  
-  .s {
-  
+
+  75% {
+    transform: rotate(-5deg);
   }
-  
-  .d {
-  
+
+  100% {
+    transform: rotate(0deg);
   }
-  
-  .j {
-  
+}
+
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 3rem;
   }
-  
-  .k {
-  
+}
+
+@media (max-width: 480px) {
+  h1 {
+    margin-top: 10px;
+    font-size: 2.5rem;
   }
-  
-  .l {
-  
-  }
-  
-  .set {
-    margin: 10% auto;
-  }
-  
-  .game-over {
-    background-color: red;
-    opacity: 0.8;
-  }
-  
-  .pressed {
-    box-shadow: 0 3px 4px 0 #DBEDF3;
-    opacity: 0.5;
-  }
-  
-  .red {
-    color: red;
-  }
-  
+
   .drum {
-    outline: none;
-    border: 10px solid #3D5A80;
-    font-size: 5rem;
-    font-family: "IM Fell DW Pica", serif;
-    line-height: 2;
-    font-weight: 900;
-    color: #EE6C4D;
-    border-radius: 15px;
-    display: inline-block;
-    width: 150px;
-    height: 150px;
-    text-align: center;
-    margin: 10px;
-    background-color: white;
+    width: 120px;
+    height: 120px;
+    font-size: 2rem;
   }
-  
+
+  #rules {
+    font-size: 1.4rem;
+    width: 80%;
+  }
+}
